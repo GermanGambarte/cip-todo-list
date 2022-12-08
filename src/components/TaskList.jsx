@@ -3,7 +3,7 @@ import React from 'react'
 import { TaskItem } from './TaskItem'
 import styles from './Tasklist.module.css'
 
-export const TaskList = ({ tasks, deleteTask, toggleTask }) => {
+export const TaskList = ({ tasks, deleteTask, toggleTask, enterEditMode }) => {
   return (
     <ul className={styles.tasks}>
       {tasks
@@ -12,6 +12,7 @@ export const TaskList = ({ tasks, deleteTask, toggleTask }) => {
           <TaskItem
             key={task.id}
             deleteTask={deleteTask}
+            enterEditMode={enterEditMode}
             task={task}
             toggleTask={toggleTask}
           />

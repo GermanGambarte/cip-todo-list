@@ -3,7 +3,7 @@ import { CheckIcon, PencilIcon, TrashIcon } from '@heroicons/react/solid'
 
 import styles from './TaskItem.module.css'
 
-export const TaskItem = ({ task, deleteTask, toggleTask }) => {
+export const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
   const { name, checked, id } = task
   const [isChecked, setIsChecked] = useState(checked)
 
@@ -31,7 +31,11 @@ export const TaskItem = ({ task, deleteTask, toggleTask }) => {
         </label>
       </div>
       <div className={styles['task-group']}>
-        <button aria-label={`Update ${name} Task`} className="btn">
+        <button
+          aria-label={`Update ${name} Task`}
+          className="btn"
+          onClick={() => enterEditMode(task)}
+        >
           <PencilIcon height={24} width={24} />
         </button>
         <button
