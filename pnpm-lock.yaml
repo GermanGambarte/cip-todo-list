@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^1.0.6
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
   '@vitejs/plugin-react': ^2.2.0
@@ -15,6 +16,7 @@ specifiers:
   vite: ^3.2.3
 
 dependencies:
+  '@heroicons/react': 1.0.6_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -333,6 +335,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@heroicons/react/1.0.6_react@18.2.0:
+    resolution: {integrity: sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
