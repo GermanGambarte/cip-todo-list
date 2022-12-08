@@ -3,7 +3,7 @@ import { CheckIcon, PencilIcon, TrashIcon } from '@heroicons/react/solid'
 
 import styles from './TaskItem.module.css'
 
-export const TaskItem = ({ task }) => {
+export const TaskItem = ({ task, deleteTask }) => {
   const { name, checked, id } = task
   const [isChecked, setIsChecked] = useState(checked)
 
@@ -36,6 +36,7 @@ export const TaskItem = ({ task }) => {
         <button
           aria-label={`Delete ${name} Task`}
           className={`btn ${styles.delete}`}
+          onClick={() => deleteTask(id)}
         >
           <TrashIcon height={24} width={24} />
         </button>
