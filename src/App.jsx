@@ -14,13 +14,27 @@ const App = () => {
     setTasks(filteredList)
   }
 
+  const toggleTask = (id) => {
+    const toggle = tasks.map((task) =>
+      task.id === id ? { ...task, checked: !task.checked } : task
+    )
+
+    setTasks(toggle)
+  }
+
   return (
     <div className="container">
       <header>
         <h1>My Task List</h1>
       </header>
       <CustomForm addTask={addTask} />
-      {tasks && <TaskList deleteTask={deleteTask} tasks={tasks} />}
+      {tasks && (
+        <TaskList
+          deleteTask={deleteTask}
+          tasks={tasks}
+          toggleTask={toggleTask}
+        />
+      )}
     </div>
   )
 }

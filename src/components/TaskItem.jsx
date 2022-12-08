@@ -3,12 +3,13 @@ import { CheckIcon, PencilIcon, TrashIcon } from '@heroicons/react/solid'
 
 import styles from './TaskItem.module.css'
 
-export const TaskItem = ({ task, deleteTask }) => {
+export const TaskItem = ({ task, deleteTask, toggleTask }) => {
   const { name, checked, id } = task
   const [isChecked, setIsChecked] = useState(checked)
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked)
+    toggleTask(id)
   }
 
   return (
